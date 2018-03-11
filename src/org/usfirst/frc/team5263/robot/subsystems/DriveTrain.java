@@ -204,12 +204,14 @@ public class DriveTrain extends Subsystem {
 	 * encoder clicks * ------------ * ---------------------------- = inches traveled
 	 *                    # clicks             1 revolution
 	 */
-	public double getLeftEncoderInches() {
-		return getLeftEncoder() * (1 / encoderClicksPerRevolution) * (Math.PI * wheelDiameterInches);
-	}
+	
 
 	public double getRightEncoderInches() {
 		return getRightEncoder() * (1 / encoderClicksPerRevolution) * (Math.PI * wheelDiameterInches);
+	}
+	
+	public double getLeftEncoderInches() {
+		return getLeftEncoder() * (1 / encoderClicksPerRevolution) * (Math.PI * wheelDiameterInches);
 	}
 
 	public void resetEncoders() {
